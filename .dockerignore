@@ -1,0 +1,13 @@
+# Allow only the files needed to build the frontend and run the backend.
+# Local databases, credentials, dependencies, and old builds stay outside the image.
+**
+!Dockerfile
+!package.json
+!package-lock.json
+!index.html
+!tsconfig.json
+!vite.config.ts
+!src/
+!src/**
+!server.py
+!cosmetics.py

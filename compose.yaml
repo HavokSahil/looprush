@@ -1,0 +1,15 @@
+services:
+  looprush:
+    build: .
+    ports:
+      - "${LOOPRUSH_PORT:-8000}:8000"
+    volumes:
+      - looprush-data:/data
+    restart: unless-stopped
+    stop_grace_period: 30s
+    read_only: true
+    tmpfs:
+      - /tmp
+
+volumes:
+  looprush-data:
